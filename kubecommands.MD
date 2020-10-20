@@ -5,7 +5,7 @@ minikube profile list
 minikube dashboard
 
 kubectl apply -f [file or foldername]
-kubectl get [deployments | pods | services | etc]
+kubectl get [deployments | pods | services | namespaces | etc]
 kubectl get pv (persistent volumes)
 kubectl delete [deployment | service] [deployment | service name]
 kubectl get storageclass
@@ -25,3 +25,14 @@ gem install travis
 
 travis login --com
 travis encrypt-file service-account.json -r USERNAME/REPO --com
+
+---
+helm
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm install my-release ingress-nginx/ingress-nginx
+helm init --upgrade
+
+(maybe) gcloud container clusters upgrade  YOUR_CLUSTER_NAME --master --cluster-version 1.16
