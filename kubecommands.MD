@@ -23,8 +23,8 @@ docker run -it -v $(pwd):/app ruby:2.4 sh # Gets a terminal that has ruby instal
 docker run -it -v "%cd%":/app ruby:2.4 sh # on windows
 gem install travis
 
-travis login --com
-travis encrypt-file service-account.json -r USERNAME/REPO --com
+travis login --org
+travis encrypt-file service-account.json -r USERNAME/REPO --org
 
 ---
 helm
