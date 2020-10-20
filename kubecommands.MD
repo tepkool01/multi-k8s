@@ -36,3 +36,4 @@ helm install my-release ingress-nginx/ingress-nginx
 helm init --upgrade
 
 (maybe) gcloud container clusters upgrade  YOUR_CLUSTER_NAME --master --cluster-version 1.16
+
